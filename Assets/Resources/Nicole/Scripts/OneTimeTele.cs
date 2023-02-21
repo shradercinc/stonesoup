@@ -21,8 +21,8 @@ public class OneTimeTele : Tile
         var MousePoint = Input.mousePosition;
         MousePoint = Cam.ScreenToWorldPoint(MousePoint);
         print(MousePoint);
-        int I = 0;
-        while (teleport == false || I < 100)
+        int i = 0;
+        while (teleport == false || i < 100)
         {
             Vector3 TelePoint = new Vector3(MousePoint.x + Random.Range(-accuracy,accuracy) , MousePoint.y + Random.Range(-accuracy,accuracy), MousePoint.z);
             print(TelePoint);
@@ -55,7 +55,7 @@ public class OneTimeTele : Tile
                 Destroy(this.gameObject);
                 return;
             }
-            I++;
+            i++;
         }
     }
 

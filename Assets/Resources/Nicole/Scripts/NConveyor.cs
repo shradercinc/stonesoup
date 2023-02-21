@@ -21,13 +21,15 @@ public class NConveyor : Tile
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<Tile>() != null)
+        var OtherTile = other.gameObject.GetComponent<Tile>();
+        if (OtherTile != null)
         {
-            if (!other.gameObject.GetComponent<Tile>().hasTag(TileTags.Wall))
+            if (!OtherTile.hasTag(TileTags.Wall))
             {
-                if (other.gameObject.GetComponent<Tile>().isBeingHeld == false)
+                if (OtherTile.isBeingHeld == false)
                 {
                     other.transform.position += transform.right * ConveyorSpeed;
+                    //other.attachedRigidbody.velocity += 
                 }
             }
         }
