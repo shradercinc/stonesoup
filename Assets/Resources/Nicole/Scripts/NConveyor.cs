@@ -25,7 +25,10 @@ public class NConveyor : Tile
         {
             if (!other.gameObject.GetComponent<Tile>().hasTag(TileTags.Wall))
             {
-                other.transform.position += transform.right * ConveyorSpeed;
+                if (other.gameObject.GetComponent<Tile>().isBeingHeld == false)
+                {
+                    other.transform.position += transform.right * ConveyorSpeed;
+                }
             }
         }
     }
