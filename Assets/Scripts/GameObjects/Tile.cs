@@ -297,7 +297,7 @@ public class Tile : MonoBehaviour {
 			_body.bodyType = RigidbodyType2D.Kinematic;
 		}
 		transform.parent = tilePickingUsUp.transform;
-		transform.localPosition = new Vector3(heldOffset.x, heldOffset.y, -0.1f);
+		transform.localPosition = new Vector3(heldOffset.x, heldOffset.y, -0.2f);
 		transform.localRotation = Quaternion.Euler(0, 0, heldAngle);
 		removeTag(TileTags.CanBeHeld);
 		tilePickingUsUp.tileWereHolding = this;
