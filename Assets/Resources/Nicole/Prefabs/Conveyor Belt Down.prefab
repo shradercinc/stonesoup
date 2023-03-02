@@ -70,7 +70,12 @@ PrefabInstance:
     - target: {fileID: 5037328148008207147, guid: 8ad7894c8e1214448ab2e796eb804133,
         type: 3}
       propertyPath: m_Name
-      value: Conveyor Belt Variant 2
+      value: Conveyor Belt Down
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209347399964398315, guid: 8ad7894c8e1214448ab2e796eb804133,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ad7894c8e1214448ab2e796eb804133, type: 3}

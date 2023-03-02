@@ -10,7 +10,22 @@ PrefabInstance:
     - target: {fileID: 637274748101951420, guid: 86e1bbf6950cf914d99edb56ddb2cff8,
         type: 3}
       propertyPath: m_Name
-      value: Conveyor Belt Variant 1
+      value: Conveyor Belt Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 2971423578113306236, guid: 86e1bbf6950cf914d99edb56ddb2cff8,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2971423578113306236, guid: 86e1bbf6950cf914d99edb56ddb2cff8,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1218501759
+      objectReference: {fileID: 0}
+    - target: {fileID: 2971423578113306236, guid: 86e1bbf6950cf914d99edb56ddb2cff8,
+        type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5602662878213145925, guid: 86e1bbf6950cf914d99edb56ddb2cff8,
         type: 3}

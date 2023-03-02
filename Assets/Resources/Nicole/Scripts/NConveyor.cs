@@ -9,13 +9,16 @@ public class NConveyor : Tile
     [SerializeField] Sprite[] frames;
     [SerializeField] float animSpeed = 0.083f;
     [SerializeField] int frameSelect = 0;
+    public static HashSet<GameObject> onConveyer = new HashSet<GameObject>();
     //12 frames
     //convey direction can be 1,2,3,4 
     // Start is called before the first frame update
     void Start()
     {
+
         transform.rotation = Quaternion.Euler(0, 0, 90 * ConveyDirection);
         StartCoroutine(FrameAnim(animSpeed));
+        GetComponent<SpriteRenderer>().sortingLayerName = "Floor";
 
     }
 
@@ -27,12 +30,22 @@ public class NConveyor : Tile
             if (!OtherTile.hasTag(TileTags.Wall))
             {
                 if (OtherTile.isBeingHeld == false)
-                {
-                    other.transform.position += transform.right * ConveyorSpeed;
-                    //other.attachedRigidbody.velocity += 
+                {   
+                    if (!onConveyer.Contains(other.gameObject))
+                    {
+                        //print(other.gameObject + "not on list");
+                        other.transform.position += transform.right * ConveyorSpeed;
+                        onConveyer.Add(other.gameObject);
+                    }
+
                 }
             }
         }
+    }
+
+    private void LateUpdate()
+    {
+        onConveyer.Clear();
     }
 
     IEnumerator FrameAnim(float frameTime)
