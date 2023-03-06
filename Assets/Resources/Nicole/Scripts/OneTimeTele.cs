@@ -15,12 +15,12 @@ public class OneTimeTele : Tile
 
     public override void useAsItem(Tile tileUsingUs)
     {
-        print("Using");
+        //print("Using");
         bool teleport = false;
         base.useAsItem(tileUsingUs);
         var MousePoint = Input.mousePosition;
         MousePoint = Cam.ScreenToWorldPoint(MousePoint);
-        print(MousePoint);
+        //print(MousePoint);
         int i = 0;
         while (teleport == false || i < 100)
         {

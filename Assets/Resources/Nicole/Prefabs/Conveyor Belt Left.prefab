@@ -84,6 +84,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7072677204301904249, guid: 86e1bbf6950cf914d99edb56ddb2cff8,
         type: 3}
+      propertyPath: tags
+      value: 4096
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072677204301904249, guid: 86e1bbf6950cf914d99edb56ddb2cff8,
+        type: 3}
       propertyPath: ConveyDirection
       value: 2
       objectReference: {fileID: 0}

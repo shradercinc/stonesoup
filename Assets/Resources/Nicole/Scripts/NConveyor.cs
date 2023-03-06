@@ -27,7 +27,7 @@ public class NConveyor : Tile
         var OtherTile = other.gameObject.GetComponent<Tile>();
         if (OtherTile != null)
         {
-            if (!OtherTile.hasTag(TileTags.Wall))
+            if (!OtherTile.hasTag(TileTags.Wall | TileTags.Dirt))
             {
                 if (OtherTile.isBeingHeld == false)
                 {   
