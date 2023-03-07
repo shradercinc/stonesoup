@@ -25,7 +25,7 @@ public class ConcussiveExplosionN : Tile
         {
             if (!OtherTile.isBeingHeld)
             {
-                OtherTile.health--;
+                OtherTile.takeDamage(this, 1);
             }    
         }
     }

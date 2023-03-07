@@ -35,11 +35,13 @@ public class MagnetSlimeN : BasicAICreature
         {
             Magnet.GetComponent<MagnetN>().attracting = true;
             Vector2 dir = transform.position - MagTarget.transform.position;
+            /*
             print("direction : " + dir);
             print("Normalized : " + dir.normalized);
             print("Magnitude : " + dir.magnitude);
             print("Range : " + detectRadius);
             print("---------------------------------------");
+            */
             if (dir.magnitude > detectRadius * 1.2f)
             {
                 hasMagTarget = false;
