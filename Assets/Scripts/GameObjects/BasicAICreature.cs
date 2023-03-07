@@ -13,12 +13,14 @@ public class BasicAICreature : Tile {
 	// When we move, we try to move to grid snapped locations, so our current target
 	// is stored in grid coordinates.
 	protected Vector2 _targetGridPos;
-	public Vector2 targetGridPos {
+	public Vector2 targetGridPos 
+	{
 		get { return _targetGridPos; }
 	}
 
 	protected bool _takingCorrectingStep = false;
-	public bool takingCorrectingStep {
+	public bool takingCorrectingStep 
+	{
 		get { return _takingCorrectingStep; }
 	}
 
