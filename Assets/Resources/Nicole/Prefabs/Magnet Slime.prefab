@@ -159,14 +159,13 @@ MonoBehaviour:
   moveSpeed: 5
   moveAcceleration: 100
   tagsWeChase: 8
-  moveCounterMax: 2
-  moveCounterMin: 0.5
-  MagSlimeSpeed: 3
   MagTarget: {fileID: 0}
   hasMagTarget: 0
   detectRadius: 0
-  Power: 95
   Magnet: {fileID: 5608083182126212410}
+  MagRad: {fileID: 8568197222940146878}
+  MagTargets: []
+  canSeePlayer: 0
 --- !u!1 &5608083182126212410
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +285,7 @@ GameObject:
   - component: {fileID: 65151317827045584}
   - component: {fileID: 3075730720356582029}
   - component: {fileID: 169943462074018683}
+  - component: {fileID: 6690957147764418964}
   m_Layer: 0
   m_Name: MagnetRadius
   m_TagString: Untagged
@@ -319,6 +319,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922dcadd520103945ac62e5dcad24ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentGameO: {fileID: 1241344649271538468}
+  MagnetArt: {fileID: 5608083182126212410}
+  MagSlimeSpeed: 1
+  Power: 95
+  itemException: 1
+  MinRange: 2
 --- !u!50 &65151317827045584
 Rigidbody2D:
   serializedVersion: 4
@@ -407,3 +413,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6690957147764418964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8568197222940146878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8383d5072aa4580900ddfbd2e7199b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 4096
+  tileName: MagRad(Non-use)
+  health: 1
+  deathEffect: {fileID: 0}
+  deathSFX: {fileID: 0}
+  heldOffset: {x: 0.2, y: -0.1}
+  heldAngle: 0
+  tileWereHolding: {fileID: 0}
+  aimDirection: {x: 0, y: 0}

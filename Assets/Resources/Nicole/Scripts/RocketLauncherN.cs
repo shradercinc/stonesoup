@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class RocketLauncherN : Tile
 {
-    [SerializeField] float ReloadTime = 1f;
+    [SerializeField] private float ReloadTime = 1f;
     [SerializeField] float turnSpeed = 0.1f;
     [SerializeField] GameObject Projectile;
+    private bool canFire = true;
     private float reloadTimer = 0f;
     private Camera Cam;
     private Transform pos;
@@ -18,16 +19,35 @@ public class RocketLauncherN : Tile
         pos = GetComponent<Transform>();
     }
 
+    IEnumerator Reload(float reloadTime)
+    {
+        print("Reloading!");
+        float timer = 0;
+        while (timer <= reloadTime)
+        {
+            timer += Time.deltaTime;
+            print(timer);
+            yield return null;
+        }
+        print("Ready to fire!");
+        canFire = true;
+    }
+
     public override void useAsItem(Tile tileUsingUs)
     {
         base.useAsItem(tileUsingUs);
-        var rocket = Instantiate(Projectile, transform.position, transform.rotation);
-        rocket.GetComponent<RocketN>().Launcher.Add(this.gameObject);
-        if (this.isBeingHeld)
+        if (canFire)
         {
-            rocket.GetComponent<RocketN>().Launcher.Add(_tileHoldingUs.gameObject);
-        }
+            var rocket = Instantiate(Projectile, transform.position, transform.rotation);
+            rocket.GetComponent<RocketN>().Launcher.Add(this.gameObject);
+            if (this.isBeingHeld)
+            {
+                rocket.GetComponent<RocketN>().Launcher.Add(_tileHoldingUs.gameObject);
+            }
+            canFire = false;
+            StartCoroutine(Reload(ReloadTime));
 
+        }
     }
 
     public override void dropped(Tile tileDroppingUs)
