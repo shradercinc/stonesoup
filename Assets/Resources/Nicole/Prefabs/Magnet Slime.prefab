@@ -164,7 +164,6 @@ MonoBehaviour:
   detectRadius: 0
   Magnet: {fileID: 5608083182126212410}
   MagRad: {fileID: 8568197222940146878}
-  MagTargets: []
   canSeePlayer: 0
 --- !u!1 &5608083182126212410
 GameObject:
@@ -321,9 +320,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentGameO: {fileID: 1241344649271538468}
   MagnetArt: {fileID: 5608083182126212410}
-  MagSlimeSpeed: 1
+  MagSlimeSpeed: 0.5
   Power: 95
-  itemException: 1
   MinRange: 2
 --- !u!50 &65151317827045584
 Rigidbody2D:
@@ -345,7 +343,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &3075730720356582029
 CircleCollider2D:
   m_ObjectHideFlags: 0

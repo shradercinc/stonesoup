@@ -15,7 +15,7 @@ public class MagnetSlimeN : BasicAICreature
     [SerializeField] private GameObject Magnet;
     [SerializeField] private GameObject MagRad;
     private Transform MagRadPos;
-    public List<GameObject> MagTargets = new List<GameObject>();
+    //public List<GameObject> MagTargets = new List<GameObject>();
 
     public bool canSeePlayer = false;
     // Start is called before the first frame update
@@ -27,9 +27,6 @@ public class MagnetSlimeN : BasicAICreature
         MagRadPos = MagRad.GetComponent<Transform>();
     }
 
-    public override void FixedUpdate()
-    {
-    }
 
     protected override void takeStep()
     {
@@ -107,10 +104,12 @@ public class MagnetSlimeN : BasicAICreature
             Magnet.GetComponent<MagnetN>().attracting = false;
         }
         */
+         /*
         if (canSeePlayer == false) 
         {
             rb.velocity = rb.velocity * 0.9f;
         }
+         */
  
     }
 

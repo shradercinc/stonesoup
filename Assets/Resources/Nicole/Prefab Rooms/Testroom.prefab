@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3985324092151410315
+--- !u!1 &5607700267170360542
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1295122387448312757}
-  - component: {fileID: 3177124713068353582}
+  - component: {fileID: 5015217659600807223}
+  - component: {fileID: -2533705734475839857}
   m_Layer: 0
-  m_Name: Room
+  m_Name: Testroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1295122387448312757
+--- !u!4 &5015217659600807223
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3985324092151410315}
+  m_GameObject: {fileID: 5607700267170360542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,20 +31,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3177124713068353582
+--- !u!114 &-2533705734475839857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3985324092151410315}
+  m_GameObject: {fileID: 5607700267170360542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f8ee2ec02782764788294bf0d2f5e5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1361a13b4ec55f14caf17ec22899e55e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomAuthor: 
-  designedRoomFile: {fileID: 4900000, guid: 35076fbef95df30418c49efbf0d2107a, type: 3}
+  designedRoomFile: {fileID: 4900000, guid: e92c0e79ac4b30b419a47e4860ecd7c3, type: 3}
   localTilePrefabs:
   - {fileID: 1241344649271538468, guid: 2d0c9e843d992fc4f8420c8ff87dc42c, type: 3}
   - {fileID: 4537262259013342199, guid: 0810c9207a8e0cb4a9b9fa8d1270975f, type: 3}
@@ -56,7 +56,13 @@ MonoBehaviour:
   - {fileID: 6196803957578565139, guid: 33ebd65e4657ab0419956ba73989a684, type: 3}
   roomGridX: 0
   roomGridY: 0
-  validatedRooms:
-  - {fileID: 1174272238309583517, guid: 967222c79c0c4c94d8cd77ba89c75300, type: 3}
-  - {fileID: 1174272238309583517, guid: fa976972fd826ad4382092d746b4199d, type: 3}
-  - {fileID: 1174272238309583517, guid: c35a5c800ba2c7b4ea0d44c3983a2cc6, type: 3}
+  hasLeftExit: 0
+  hasRightExit: 0
+  hasUpExit: 0
+  hasDownExit: 0
+  hasPathLeftToRight: 0
+  hasPathLeftToUp: 0
+  hasPathLeftToDown: 0
+  hasPathRightToUp: 0
+  hasPathRightToDown: 0
+  hasPathUpToDown: 0

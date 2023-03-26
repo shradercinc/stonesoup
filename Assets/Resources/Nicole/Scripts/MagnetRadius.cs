@@ -14,7 +14,6 @@ public class MagnetRadius : MonoBehaviour
 
     [SerializeField] private float MagSlimeSpeed = 3;
     [SerializeField] private float Power = 10f;
-    [SerializeField] private float itemException = 3f;
     [SerializeField] private float MinRange = 2f;
 
     // Start is called before the first frame update
@@ -23,79 +22,38 @@ public class MagnetRadius : MonoBehaviour
         //parentPos = GetComponentInParent<Transform>();
         MagSlime = GetComponentInParent<MagnetSlimeN>();
         MagSlime.detectRadius = GetComponent<CircleCollider2D>().radius;
-        ParentRb = GetComponentInParent<Rigidbody2D>();
+        ParentRb = parentGameO.GetComponent<Rigidbody2D>();
         Magnet = MagnetArt.GetComponent<MagnetN>();
         
     }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        var OtherTile = other.gameObject.GetComponent<Tile>();
-        if (OtherTile != null)
-        {
-            if (OtherTile.hasTag(TileTags.CanBeHeld))
-            {
-                other.GetComponent<Collider2D>().isTrigger = true;
-            }
-        }
-
-    }
+   
 
     private void OnTriggerStay2D(Collider2D other)
     {
         var OtherTile = other.gameObject.GetComponent<Tile>();
         if (OtherTile != null)
         {
-            if (OtherTile.hasTag(TileTags.Player | TileTags.Enemy | TileTags.Friendly | TileTags.CanBeHeld) && other.gameObject != parentGameO)
+            if (OtherTile.hasTag(TileTags.Player | TileTags.Enemy | TileTags.Friendly) && other.gameObject != parentGameO)
             {
                 var OtherRb = other.gameObject.GetComponent<Rigidbody2D>();
-                var OtherCollider = other.gameObject.GetComponent<Collider2D>();
                 Magnet.attracting = true;
-                Vector2 dir = transform.position - other.transform.position;
+
+                Vector2 dir =  transform.position - other.transform.position;
                 Vector2 NDir = dir.normalized;
-                //print(-NDir);
+
                 if (OtherTile.hasTag(TileTags.Player))
                 {
                     MagSlime.canSeePlayer = true;
-                    ParentRb.AddForce((NDir * MagSlimeSpeed));
+                    var selfForce = (NDir * Power) * MagSlimeSpeed;
+                    ParentRb.AddForce(selfForce);
                 }
-                if (OtherTile.hasTag(TileTags.CanBeHeld))
-                {
-                    if (!OtherTile.isBeingHeld)
-                    {
-                        //print("Tugging exception " + other);
-                        if (dir.magnitude > MinRange)
-                        {
-                            OtherRb.AddForce((NDir * Power) / itemException);
-                        }
 
-                        OtherCollider.isTrigger = false;
-                    }
-                    else
-                    {
-                        OtherCollider.isTrigger = true;
-                    }
-
-                    
-                }
-                else
+                if (dir.magnitude > MinRange)
                 {
-                    //print("Tugging general " + other);
-                    if (dir.magnitude > MinRange)
-                    {
-                        OtherRb.AddForce((NDir * Power));
-                    }
+                    OtherRb.AddForce((NDir * Power));
                 }
             }
-            else
-            {
-                Magnet.attracting = false;
-            }
 
-        }
-        else 
-        {
-            Magnet.attracting = false;
         }
     }
 
@@ -121,10 +79,11 @@ public class MagnetRadius : MonoBehaviour
             */
         }
 
-    
+
 
     // Update is called once per frame
-    void Update()
+    private void LateUpdate()
     {
+        Magnet.attracting = false;
     }
 }
