@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3985324092151410315
+--- !u!1 &2469083343230620134
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1295122387448312757}
-  - component: {fileID: 3177124713068353582}
+  - component: {fileID: 2919293523249376903}
+  - component: {fileID: -2748971370801275212}
   m_Layer: 0
-  m_Name: Room
+  m_Name: Left - Bot Trap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1295122387448312757
+--- !u!4 &2919293523249376903
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3985324092151410315}
+  m_GameObject: {fileID: 2469083343230620134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,16 +31,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3177124713068353582
+--- !u!114 &-2748971370801275212
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3985324092151410315}
+  m_GameObject: {fileID: 2469083343230620134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f8ee2ec02782764788294bf0d2f5e5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1361a13b4ec55f14caf17ec22899e55e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomAuthor: 
@@ -56,11 +56,13 @@ MonoBehaviour:
   - {fileID: 6196803957578565139, guid: 33ebd65e4657ab0419956ba73989a684, type: 3}
   roomGridX: 0
   roomGridY: 0
-  validatedRooms:
-  - {fileID: 1174272238309583517, guid: 967222c79c0c4c94d8cd77ba89c75300, type: 3}
-  - {fileID: 1174272238309583517, guid: fa976972fd826ad4382092d746b4199d, type: 3}
-  - {fileID: 1174272238309583517, guid: c35a5c800ba2c7b4ea0d44c3983a2cc6, type: 3}
-  - {fileID: 2469083343230620134, guid: 2d54dd0dd5b264a4abb08f16aded71e9, type: 3}
-  - {fileID: 2469083343230620134, guid: 74080bc3589f1064bbc93d7202a44970, type: 3}
-  - {fileID: 2469083343230620134, guid: 8f84226f4593c884597437986fe7637d, type: 3}
-  - {fileID: 2469083343230620134, guid: 706338860feee8e459c33ac7addd364b, type: 3}
+  hasLeftExit: 1
+  hasRightExit: 1
+  hasUpExit: 0
+  hasDownExit: 0
+  hasPathLeftToRight: 1
+  hasPathLeftToUp: 0
+  hasPathLeftToDown: 0
+  hasPathRightToUp: 0
+  hasPathRightToDown: 0
+  hasPathUpToDown: 0
