@@ -60,7 +60,7 @@ public class LevelGenerator : MonoBehaviour {
 		_currentBagIndex++;
 
 		string roomPath = string.Format("{0}/room", netID);
-		return Resources.Load<GameObject>(roomPath); 
+		return UnityEngine.Resources.Load<GameObject>(roomPath); 
 	}
 
 	// The function called by the GameManager to actually generate the level.

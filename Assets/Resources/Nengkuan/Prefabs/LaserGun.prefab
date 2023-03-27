@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1258897159700124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 4748588795704510}
   m_Father: {fileID: 4921814412825708}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d3c974ae5fedb4868b4997c3bf4eb589, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb9ab3a0ec143ff4f870e04eebc47bac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554892693995942}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 0.2, z: 0}
+  m_LocalPosition: {x: 3.92, y: 0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4109497223914858}
@@ -189,8 +189,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4921814412825708}
-  - component: {fileID: 114906145690682584}
   - component: {fileID: 61304914532229252}
+  - component: {fileID: 435462787855333766}
   m_Layer: 0
   m_Name: LaserGun
   m_TagString: Untagged
@@ -213,34 +213,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114906145690682584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1614338125090674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9034efdd2131484398f9612f12ebe99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tags: 66
-  tileName: LaserGun
-  health: 1
-  deathEffect: {fileID: 1581785524438676, guid: b55624526117b4928b6338cb05f43f68,
-    type: 3}
-  deathSFX: {fileID: 0}
-  heldOffset: {x: 0.2, y: -0.1}
-  heldAngle: 0
-  tileWereHolding: {fileID: 0}
-  aimDirection: {x: 0, y: 0}
-  bulletPrefab: {fileID: 1838362062477336, guid: 5c4e89998a1ba414b923d44895d1a47e,
-    type: 3}
-  muzzleFlashObj: {fileID: 1554892693995942}
-  recoilForce: 400
-  shootForce: 1000
-  cooldownTime: 0.1
 --- !u!61 &61304914532229252
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -267,3 +239,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &435462787855333766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614338125090674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac561a533e68406b977bd42f2bc24af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 66
+  tileName: 
+  health: 1
+  deathEffect: {fileID: 0}
+  deathSFX: {fileID: 0}
+  heldOffset: {x: 0.2, y: -0.1}
+  heldAngle: 0
+  tileWereHolding: {fileID: 0}
+  aimDirection: {x: 0, y: 0}
+  laserPrefab: {fileID: 1020963301858360706, guid: 315b75359dc9e484c8a1040e3015f391,
+    type: 3}
+  muzzleSocket: {fileID: 4748588795704510}
+  fireInterval: 0.5
+  impenetrableLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  maxRange: 100
