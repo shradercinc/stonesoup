@@ -74,9 +74,16 @@ public class pg2259NormalRoom : Room
             print("making room type 1"); //shield
             Vector2Int spot = getEmptySpot(filledSpots);
             Tile.spawnTile(localTilePrefabs[7 - LevelGenerator.LOCAL_START_INDEX], transform, spot.x, spot.y);
+            spot = getEmptySpot(filledSpots);
+            Tile.spawnTile(localTilePrefabs[9 - LevelGenerator.LOCAL_START_INDEX], transform, spot.x, spot.y);
+            spot = getEmptySpot(filledSpots);
+            Tile.spawnTile(localTilePrefabs[9 - LevelGenerator.LOCAL_START_INDEX], transform, spot.x, spot.y);
         }
         else if (roomType == ROOM_TYPE_TWO) //mutant pigs
         {
+            Vector2Int spot = getEmptySpot(filledSpots);
+            spot = getEmptySpot(filledSpots);
+            Tile.spawnTile(localTilePrefabs[9 - LevelGenerator.LOCAL_START_INDEX], transform, spot.x, spot.y);
             print("making room type 2");
             fillAllWithChance(getAllEmptySpots(filledSpots), 4, 0.04f, ourGenerator);
         }
@@ -85,6 +92,10 @@ public class pg2259NormalRoom : Room
             print("making room type 3");
             Vector2Int spot = getEmptySpot(filledSpots);
             Tile.spawnTile(localTilePrefabs[5 - LevelGenerator.LOCAL_START_INDEX], transform, spot.x, spot.y);
+            spot = getEmptySpot(filledSpots);
+            Tile.spawnTile(localTilePrefabs[9 - LevelGenerator.LOCAL_START_INDEX], transform, spot.x, spot.y);
+            spot = getEmptySpot(filledSpots);
+            Tile.spawnTile(localTilePrefabs[9 - LevelGenerator.LOCAL_START_INDEX], transform, spot.x, spot.y);
         }
 
     }
