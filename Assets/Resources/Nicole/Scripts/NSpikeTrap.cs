@@ -22,22 +22,22 @@ public class NSpikeTrap : Tile
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        print("enter:");
+        //print("enter:");
         var otherTile = other.GetComponent<Tile>();
         if (otherTile != null)
         {
-            print(otherTile);
-            print(otherTile.tags);
+            //print(otherTile);
+            //print(otherTile.tags);
             if (otherTile.hasTag(TileTags.Player))
             {
-                print("Stabby!");
+                //print("Stabby!");
                 SprRen.sprite = active;
                 isActive = true;
                 otherTile.takeDamage(this, 1);
             }
         }
-        print("");
-        print("");
+        //print("");
+        //print("");
     }
 
     private void OnTriggerExit2D(Collider2D other)
