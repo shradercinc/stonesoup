@@ -13,27 +13,28 @@ using UnityEngine;
 
 public class jrr504_SigilOfStumbling : Tile
 {   
+    // Variable to capture the player when they step on the trap
+    private static GameObject afflictedPlayer;
+
     // Cooldown to prevent trap from being activated again less than X seconds after activation
-    private float trapCooldown = 12f;
+    private static float trapCooldown = 12f;
 
     // How long trap effect should last
     [SerializeField] private float trapEffectDuration = 10f;
-    private float trapEffectTimer;
+    private static float trapEffectTimer;
 
     // Whether trap may be sprung or not
-    private bool trapSetFlag = true;
+    private static bool trapSetFlag = true;
 
     // Bool to signal debuff trigger
-    private bool trapTriggeredFlag = false;
+    private static bool trapTriggeredFlag = false;
 
     // Coroutine to reset trap
     private IEnumerator trapReset;
 
-    // Variable to capture the player when they step on the trap
-    private GameObject afflictedPlayer;
 
     // Intensity that player stumbles when stepping on the trap
-    [SerializeField] private float stumbleIntensity = 0.25f;
+    [SerializeField] private float stumbleIntensity = 0.5f;
 
     void Awake() {
         trapEffectTimer = trapEffectDuration;
@@ -42,7 +43,7 @@ public class jrr504_SigilOfStumbling : Tile
     void FixedUpdate() {
         // rotate player or AddForce
         if (trapTriggeredFlag) {
-            if (trapEffectTimer >= 0f) {
+            if (trapEffectTimer > 0f) {
                 trapEffectTimer -= Time.deltaTime;
                 afflictedPlayer.transform.position = new Vector2(afflictedPlayer.transform.position.x + Random.Range(-stumbleIntensity, stumbleIntensity), afflictedPlayer.transform.position.y + Random.Range(-stumbleIntensity, stumbleIntensity));
             }

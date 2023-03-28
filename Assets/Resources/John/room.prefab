@@ -46,9 +46,15 @@ MonoBehaviour:
   roomAuthor: John Ricotta
   designedRoomFile: {fileID: 4900000, guid: 78d850afb05a94f4fba7a060fff4aef5, type: 3}
   localTilePrefabs:
-  - {fileID: 3809347962618501673, guid: ca61c1abbd805c44bbf4dad4c623cef8, type: 3}
-  - {fileID: 1273737218209362, guid: 60fd235cf8e0b1344ad4d6402f641466, type: 3}
-  - {fileID: 1781302445510578, guid: 95fa7d8099b244e4db91819e0a721a98, type: 3}
-  - {fileID: 2967442286736046598, guid: 44c4718400b7a5e46b3be341573747bd, type: 3}
+  - {fileID: 1781302445510578, guid: cc85aa4cb741ae94889053d626f51b3b, type: 3}
   roomGridX: 0
   roomGridY: 0
+  validatedRooms:
+  - {fileID: 2143130999955267753, guid: 3c9cfaf556f481844a5d8d3e24d9cbfd, type: 3}
+  - {fileID: 2143130999955267753, guid: 51d785aee06f37d459c7f229dc383bfc, type: 3}
+  - {fileID: 2143130999955267753, guid: 93a23676c05d8cd41bc1531a7ea99f53, type: 3}
+  - {fileID: 2143130999955267753, guid: 2ba78e40f16f71e4584349fd87fd9e84, type: 3}
+  - {fileID: 2143130999955267753, guid: f67e530b3703c1c4f8944d48f8e51279, type: 3}
+  - {fileID: 2143130999955267753, guid: 7cc5e6ae6ec515244a344b3747caef5c, type: 3}
+  - {fileID: 2143130999955267753, guid: 9fbd1f2c3b5f18946b5dbf4e6a2d3741, type: 3}
+  - {fileID: 2143130999955267753, guid: 71a575a48226fa147a8aeea073b6bb11, type: 3}
