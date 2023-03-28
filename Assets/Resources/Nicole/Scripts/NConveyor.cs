@@ -22,6 +22,13 @@ public class NConveyor : Tile
 
     }
 
+    public override void init()
+    {
+        base.init();
+        // Fix the sorting issue.
+        _sprite.sortingLayerID = SortingLayer.NameToID("Below Floor");
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         var OtherTile = other.gameObject.GetComponent<Tile>();
