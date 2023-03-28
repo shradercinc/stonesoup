@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4728783509409543610}
-  - component: {fileID: -5716855380242018720}
+  - component: {fileID: 2007109411740956444}
   m_Layer: 0
-  m_Name: Room
+  m_Name: TrapRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5716855380242018720
+--- !u!114 &2007109411740956444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,20 +40,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8159146078856824935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce626dfe41de4476b5b8bcd5605304ab, type: 3}
+  m_Script: {fileID: 11500000, guid: e9fda1be0f47f4d2eb0cd4977c7295a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomAuthor: 
-  designedRoomFile: {fileID: 4900000, guid: 1b8ec468b50edaa438d4bbc27c755ca1, type: 3}
-  localTilePrefabs: []
+  roomAuthor: Nengkuan
+  designedRoomFile: {fileID: 4900000, guid: 1d349d16d824bbc4c9adb1e8f751ccea, type: 3}
+  localTilePrefabs:
+  - {fileID: 1759002711901290, guid: 77db73387f67ce441918ed8ebf3e8637, type: 3}
+  - {fileID: 1249101369981090, guid: aa91c8410fc2cfd46a1661bb75fa4d08, type: 3}
+  - {fileID: 2211747834015279388, guid: 4ff4108c2cbbff343ac663e544c343e3, type: 3}
+  - {fileID: 1614338125090674, guid: 99b39cfa8c7766642a113420697c1a79, type: 3}
+  - {fileID: 1759002711901290, guid: 12befc6f8cf46794995e260b4d738505, type: 3}
   roomGridX: 0
   roomGridY: 0
-  roomConfigs:
-  - roomType: 0
-    probabilityWeight: 1
-    roomPrefab: {fileID: 2007109411740956444, guid: 676dbec989240854ba7b54077fe0cda1,
-      type: 3}
-  - roomType: 1
-    probabilityWeight: 1
-    roomPrefab: {fileID: 1035899824138846630, guid: f9dac50c667c25f4c8322f36f88a4810,
-      type: 3}

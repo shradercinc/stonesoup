@@ -17,7 +17,8 @@ namespace Resources.Nengkuan.Scripts
         public override void init()
         {
             base.init();
-            transform.eulerAngles = initialRotation;
+            // transform.eulerAngles = initialRotation;
+            transform.eulerAngles = new Vector3(0, 0, Random.Range(0, 5) * 90 + 45);
         }
 
         public void Hit(Vector2 direction, Vector2 hitPoint, float rangeLeft)
