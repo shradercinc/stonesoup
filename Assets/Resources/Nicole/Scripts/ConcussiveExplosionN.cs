@@ -23,7 +23,7 @@ public class ConcussiveExplosionN : Tile
         var OtherTile = other.gameObject.GetComponent<Tile>();
         if (OtherTile != null)
         {
-            if (!OtherTile.isBeingHeld)
+            if (!OtherTile.isBeingHeld && !OtherTile.hasTag(TileTags.Wall | TileTags.Dirt | TileTags.CanBeHeld))
             {
                 OtherTile.takeDamage(this, 1);
             }    

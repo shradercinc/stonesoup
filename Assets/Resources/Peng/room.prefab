@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1212264752040975510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 294161869885422770}
+  - component: {fileID: 529748591370411439}
+  m_Layer: 0
+  m_Name: room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &294161869885422770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212264752040975510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &529748591370411439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212264752040975510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1563287a56c017c4eb81cb7764d6dbd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomAuthor: Peng
+  designedRoomFile: {fileID: 4900000, guid: 493006a1cccddc04da46dd0a3f9006de, type: 3}
+  localTilePrefabs:
+  - {fileID: 1781302445510578, guid: 9c4e4237915c88f4eb8499d13d0d4cf1, type: 3}
+  - {fileID: 1403095745553274, guid: 4f8651ea893c5d647b23daffd7937e3c, type: 3}
+  - {fileID: 1097009321995878, guid: 7f119146519d742d7953341b07580643, type: 3}
+  - {fileID: 1403095745553274, guid: c9ca7643816b36d419276b591de0e802, type: 3}
+  - {fileID: 1387771116485768, guid: e4d00d2fcd2614042856187fc264cd0d, type: 3}
+  - {fileID: 1387771116485768, guid: 8b70f1a5dbe51914fbdc4a5726303d48, type: 3}
+  - {fileID: 1387771116485768, guid: 8b70f1a5dbe51914fbdc4a5726303d48, type: 3}
+  roomGridX: 0
+  roomGridY: 0

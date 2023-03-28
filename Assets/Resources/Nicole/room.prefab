@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5607700267170360542
+--- !u!1 &3985324092151410315
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5015217659600807223}
-  - component: {fileID: 8147565187083061974}
+  - component: {fileID: 1295122387448312757}
+  - component: {fileID: 3177124713068353582}
   m_Layer: 0
-  m_Name: room
+  m_Name: Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5015217659600807223
+--- !u!4 &1295122387448312757
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5607700267170360542}
+  m_GameObject: {fileID: 3985324092151410315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,27 +31,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8147565187083061974
+--- !u!114 &3177124713068353582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5607700267170360542}
+  m_GameObject: {fileID: 3985324092151410315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9fda1be0f47f4d2eb0cd4977c7295a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f8ee2ec02782764788294bf0d2f5e5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomAuthor: Nicole
-  designedRoomFile: {fileID: 4900000, guid: e92c0e79ac4b30b419a47e4860ecd7c3, type: 3}
+  roomAuthor: 
+  designedRoomFile: {fileID: 4900000, guid: 099ca31bf118e2e4ea11a0d19a898b13, type: 3}
   localTilePrefabs:
+  - {fileID: 1241344649271538468, guid: 2d0c9e843d992fc4f8420c8ff87dc42c, type: 3}
   - {fileID: 4537262259013342199, guid: 0810c9207a8e0cb4a9b9fa8d1270975f, type: 3}
+  - {fileID: 8341764795789378645, guid: 2ea67a48cb54a804590edb66860a025d, type: 3}
+  - {fileID: 4793184666683631216, guid: c37f20cddbcb36348a3fc81894446a65, type: 3}
+  - {fileID: 5037328148008207147, guid: 8ad7894c8e1214448ab2e796eb804133, type: 3}
   - {fileID: 1346345445334071153, guid: c2cf78bda9480f145885712c41cccc89, type: 3}
   - {fileID: 637274748101951420, guid: 86e1bbf6950cf914d99edb56ddb2cff8, type: 3}
-  - {fileID: 5037328148008207147, guid: 8ad7894c8e1214448ab2e796eb804133, type: 3}
-  - {fileID: 4793184666683631216, guid: c37f20cddbcb36348a3fc81894446a65, type: 3}
-  - {fileID: 8341764795789378645, guid: 2ea67a48cb54a804590edb66860a025d, type: 3}
-  - {fileID: 1241344649271538468, guid: 2d0c9e843d992fc4f8420c8ff87dc42c, type: 3}
+  - {fileID: 6196803957578565139, guid: 33ebd65e4657ab0419956ba73989a684, type: 3}
+  - {fileID: 1215785095147150, guid: 2b0738d5b2f5d4d9982b845d0d9dc73c, type: 3}
+  - {fileID: 1376035031062694, guid: 78f95855a030f41dd8db1eb469d7aee2, type: 3}
   roomGridX: 0
   roomGridY: 0
+  validatedRooms:
+  - {fileID: 1174272238309583517, guid: 967222c79c0c4c94d8cd77ba89c75300, type: 3}
+  - {fileID: 1174272238309583517, guid: fa976972fd826ad4382092d746b4199d, type: 3}
+  - {fileID: 1174272238309583517, guid: c35a5c800ba2c7b4ea0d44c3983a2cc6, type: 3}
+  - {fileID: 2469083343230620134, guid: 2d54dd0dd5b264a4abb08f16aded71e9, type: 3}
+  - {fileID: 2469083343230620134, guid: 74080bc3589f1064bbc93d7202a44970, type: 3}
+  - {fileID: 2469083343230620134, guid: 8f84226f4593c884597437986fe7637d, type: 3}
+  - {fileID: 2469083343230620134, guid: 706338860feee8e459c33ac7addd364b, type: 3}
+  - {fileID: 2469083343230620134, guid: 43044a1c81f927243997b722f2efa285, type: 3}
+  - {fileID: 2469083343230620134, guid: c41d7871cde152a4083a488208505d6c, type: 3}
+  - {fileID: 2469083343230620134, guid: ba8ae9fc1f1445c4c80761dac07b74c1, type: 3}
+  - {fileID: 2469083343230620134, guid: 0e10927cfc8d6664382304293b672021, type: 3}
